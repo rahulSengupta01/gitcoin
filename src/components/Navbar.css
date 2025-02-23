@@ -1,0 +1,86 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(233, 243, 244);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  .site-name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .dropdown-icon {
+    margin-left: 5px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Button Styles */
+  .task-button, .login-button, .signup-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-button {
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  .task-button:hover {
+    background-color: rgba(0, 0, 255, 0.1);
+  }
+  
+  .login-button {
+    color: white;
+    background-color: rgb(143, 149, 180);
+  }
+  
+  .login-button:hover {
+    color: blue;
+  }
+  
+  .signup-button {
+    background-color: rgb(42, 142, 158);
+    color: white;
+  }
+  
+  .signup-button:hover {
+    background-color: darkblue;
+  }
+  
