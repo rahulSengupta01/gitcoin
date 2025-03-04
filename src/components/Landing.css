@@ -1,0 +1,147 @@
+/* Landing Page Styles */
+.landing-container {
+    background-color: #f7f8fc;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: start;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    justify-content: center; /* Center vertically */
+    height: 100%; /* Ensure it takes full height */
+  }
+  
+  .hero p {
+    font-size: 2rem;
+    color: #555;
+    margin-left: 150px; /* Moves the paragraph 150px from the left */
+    text-align: left; /* Ensures text remains left-aligned */
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* .hero p {
+    font-size: 2rem;
+    color: #555;
+  } */
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .find-work{
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 200px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hire-talent {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .find-work {
+    background-color: #008080;
+    color: white;
+  }
+  
+  .hire-talent {
+    background-color: #1e1e1e;
+    color: white;
+  }
+  
+ /* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 15px; /* Adjust spacing between items */
+    margin-top: 40px;
+    text-align: left;
+    max-width: 600px; /* Adjust based on design */
+  }
+  
+  /* Feature Item */
+  .feature-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  /* Payment Section */
+  .payment-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-card h4 {
+    font-size: 1.2rem;
+  }
+  
+  .profile-card .email {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .invoice h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .payment-options {
+    margin-top: 10px;
+  }
+  
+  .payment-options label {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .pay-button {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Credit Card */
+  .credit-card {
+    background-color: #008080;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+  }
+  
