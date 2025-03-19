@@ -1,21 +1,27 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import Navbar from "./navbar.jsx";
 import "./Landing.css"; // Importing the CSS file
 
 const Landing = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
   return (
     <div className="landing-container">
       {/* Navbar */}
-      <Navbar/>
+      <Navbar />
 
       {/* Hero Section */}
       <div className="hero">
-      <h1>"Empowering Freelancers, Redefining <br />  Work—"</h1>
-
-        <p>Welcome to the Future <br ></br>of Web3 Freelancing. 🚀</p>
+        <h1>"Empowering Freelancers, Redefining <br /> Work—"</h1>
+        <p>Welcome to the Future <br />of Web3 Freelancing. 🚀</p>
         <div className="buttons">
-          <button className="find-work">Find Work</button>
-          <button className="hire-talent">Hire Talent</button>
+          <button className="find-work" onClick={() => navigate("/find-work")}>
+            Find Work
+          </button>
+          <button className="hire-talent" onClick={() => navigate("/hirework")}>
+            Hire Talent
+          </button>
         </div>
       </div>
 

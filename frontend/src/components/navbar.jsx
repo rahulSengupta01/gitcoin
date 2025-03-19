@@ -25,7 +25,12 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-buttons">
-        <button className="task-button">Create a Task</button>
+        {/* Navigate to CreateTask page */}
+        <button className="task-button" onClick={() => navigate("/create-task")}>
+          Create a Task
+        </button>
+
+        {/* Navigate to Login/Signup page */}
         <button className="signup-button" onClick={() => navigate("/login")}>
           Login / Signup
         </button>
