@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import loginImage from '/src/assets/login.avif';
 import signupImage from '/src/assets/6368592.jpg';
-
+import axios from 'axios';
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -21,9 +21,12 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      // Navigate to the homepage after successful login
-      navigate('/Homepage'); // Redirect to homepage
+     const response = await axios.post('http://localhost:5000/api/auth/login', {
+      email,
+      password,
+    });
+    localStorage.setItem('token', response.data.token);
+    navigate('/Landing'); // Redirect to homepage after login
     } catch (error) {
       setError("Failed to log in. Check your email and password.");
       console.error("Login error:", error);
@@ -34,9 +37,13 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      // Optionally navigate to the homepage or login page after successful signup
-      navigate('/Homepage'); // Redirect to homepage after sign up
+      const response = await axios.post('http://localhost:5000/api/auth/signup', {
+      name,
+      email,
+      password,
+    });
+    localStorage.setItem('token', response.data.token);
+    navigate('/Landing'); // Redirect to homepage after sign up
     } catch (error) {
       setError("Failed to create an account. Please try again.");
       console.error("Sign Up error:", error);

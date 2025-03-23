@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";  // Import useNavigate
 import "./Navbar.css";
 import logo from "../assets/react.svg";
 import Login from "./auth/Login";
-import Signup from "./auth/Signup";
+
 
 const Navbar = () => {
   const navigate = useNavigate();  // Create navigate function
