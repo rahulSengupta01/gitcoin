@@ -8,7 +8,7 @@
   
   .hero {
     text-align: start;
-    margin-top: 80px;
+    margin-top:20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align text to the left */
@@ -83,16 +83,26 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
   }
   
   
   /* Payment Section */
   .payment-section {
     display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
-  }
+    flex-direction:row;  /* Stack profile and card vertically */
+    gap: 20px;
+    position: absolute;  /* Position it freely */
+    right: 50px;  /* Push it to the right */
+    top: 75%;  /* Center it vertically */
+    transform: translateY(-50%);
+    align-items: flex-end;  /* Align items to the right */
+}
+
   
   .profile-card {
     background: white;
@@ -100,8 +110,13 @@
     border-radius: 8px;
     width: 300px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+  .profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
   .profile-card h4 {
     font-size: 1.2rem;
   }
@@ -142,6 +157,11 @@
     color: white;
     border-radius: 8px;
     width: 250px;
+    height: 250px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+  .credit-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  }

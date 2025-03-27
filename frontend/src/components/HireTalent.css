@@ -1,0 +1,205 @@
+/* Hire Talent Container */
+.hire-talent-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #a92222;
+}
+
+/* Left Container: Job Form */
+.left-container {
+    flex: 1;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.left-container h2 {
+    margin-bottom: 16px;
+    color: #333;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+/* Button Group (Post & Remove Job Buttons) */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 250px;
+}
+
+.post-job-btn, .remove-job-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+    flex: 1;
+}
+
+.remove-job-btn {
+    background-color: #f44336;
+}
+
+.post-job-btn:hover, .remove-job-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Input Fields */
+.job-form input, .job-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.job-form input:focus, .job-form textarea:focus {
+    border-color: #0a585e;
+    outline: none;
+}
+
+/* Job Form Button Block */
+.job-form-button-block {
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.job-form button, .remove-all {
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+    margin: 0;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.job-form button {
+    background-color: #007bff;
+    color: white;
+}
+
+.job-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.remove-all {
+    background-color: #dc3545;
+    color: white;
+}
+
+.remove-all:hover {
+    background-color: #c82333;
+    transform: scale(1.02);
+}
+
+/* Success Toast Message */
+.toast-message {
+    margin-top: 12px;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Right Container: Job Listings */
+.right-container {
+    flex: 1;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.right-container h2 {
+    margin-bottom: 16px;
+    color: #333;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+/* Job Card */
+.job-card {
+    margin-bottom: 14px;
+    padding: 16px;
+    background-color: #f8f9fc;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #007bff;
+}
+
+.job-card p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Job Actions */
+.job-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.job-actions button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #17a2b8;
+}
+
+.edit-btn:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}

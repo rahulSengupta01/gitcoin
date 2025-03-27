@@ -1,0 +1,120 @@
+/* General Styles */
+.find-work-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure Navbar Stays in Original Size */
+.navbar {
+    width: 100%;
+    background-color: white;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* Header Section */
+.find-work-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.find-work-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.find-work-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Job Listings Section */
+.job-listings {
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual Job Card */
+.job-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-card h3 {
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.job-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.job-card .job-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.job-card .job-info span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Apply Button */
+.apply-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.apply-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .find-work-header h1 {
+        font-size: 2rem;
+    }
+
+    .job-listings {
+        width: 95%;
+    }
+
+    .job-card {
+        padding: 15px;
+    }
+
+    /* Ensure Navbar Stays Properly Sized */
+    .navbar {
+        padding: 10px 15px;
+    }
+}
