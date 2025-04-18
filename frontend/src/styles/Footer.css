@@ -1,0 +1,117 @@
+.footer {
+    background-color: #2595a4; /* Dark Green */
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-bg {
+    background: url('../assets/footer-bg.png') no-repeat center top;
+    background-size: cover;
+    padding: 3rem 0;
+  }
+  
+  .footer-container {
+    display:flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .footer-column {
+    width: 30%;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  
+  .footer-column.center {
+    text-align: center;
+  }
+  
+  .footer-input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .signup-btn {
+    background-color: #F5F5DC; /* Beige */
+    color: #2595a4;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .signup-btn:hover {
+    background-color: #e3e3c3;
+  }
+  
+  .footer-badge {
+    background: #fff;
+    color:#2595a4;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom {
+    background-color: #2595a4;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  .footer-bottom::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5); /* Light separator line */
+    margin: 0 auto 10px auto;
+  }
+  
+  .footer-bottom a {
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  

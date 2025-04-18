@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./CreateTask.css"; // Import the CSS file
-import Task from "../assets/3856147.png";
+import Task from "../../assets/3856147.png"; // Import the image
 
 const CreateTask = () => {
   const [task, setTask] = useState({
@@ -92,6 +92,7 @@ const CreateTask = () => {
 
       </div>
     </div>
+    
   );
 };
 

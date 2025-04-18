@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegBookmark } from "react-icons/fa";
-import Navbar from "./navbar";
+import Navbar from "../Navbar/navbar";
 import "./FindWork.css";
 
 const FindWork = () => {

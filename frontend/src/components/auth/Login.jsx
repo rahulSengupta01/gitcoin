@@ -1,35 +1,41 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import loginImage from '/src/assets/login.avif';
-import signupImage from '/src/assets/6368592.jpg';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { auth } from '../../firebaseConfig';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
+import loginImage from '../../assets/login.avif'; // Import your login image here
+import signup from '../../assets/signup.jpg'; // Import your signup image here
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState(''); // For Sign Up
+  const [role, setRole] = useState('CLIENT');
+  const [name, setName] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // useNavigate hook to programmatically navigate
+  const [signupSuccess, setSignupSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const toggleForm = () => {
     setIsLogin(!isLogin);
-    setError(''); // Clear error message when toggling
+    setError('');
+    setSignupSuccess(false);
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
     try {
-     const response = await axios.post('http://localhost:5000/api/auth/login', {
-      email,
-      password,
-    });
-    localStorage.setItem('token', response.data.token);
-    navigate('/Landing'); // Redirect to homepage after login
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      localStorage.setItem('token', userCredential.user.accessToken);
+      console.log("Login Successful", userCredential.user);
+      
+      if (role === 'CLIENT') {
+        navigate('/client-dashboard');
+      } else {
+        navigate('/user-dashboard');
+      }
     } catch (error) {
-      setError("Failed to log in. Check your email and password.");
-      console.error("Login error:", error);
+      setError(error.message);
     }
   };
 
@@ -37,16 +43,10 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/signup', {
-      name,
-      email,
-      password,
-    });
-    localStorage.setItem('token', response.data.token);
-    navigate('/Landing'); // Redirect to homepage after sign up
+      await createUserWithEmailAndPassword(auth, email, password);
+      setSignupSuccess(true);
     } catch (error) {
-      setError("Failed to create an account. Please try again.");
-      console.error("Sign Up error:", error);
+      setError(error.message);
     }
   };
 
@@ -58,7 +58,7 @@ const Login = () => {
         alignItems: 'center',
         height: '100vh',
         backgroundColor: 'rgba(93, 159, 176, 0.1)',       
-         backgroundSize: 'cover',
+        backgroundSize: 'cover',
         backgroundPosition: 'center',
         opacity: 0.8, // Adjust opacity as needed
       }}
@@ -127,6 +127,23 @@ const Login = () => {
                   outline: 'none',
                 }}
               />
+               {/* Role Selection Dropdown */}
+               <select
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                style={{
+                  padding: '10px',
+                  marginBottom: '15px',
+                  width: '100%',
+                  border: '1px solid #ccc',
+                  borderRadius: '5px',
+                  outline: 'none',
+                  backgroundColor: 'white',
+                }}
+              >
+                <option value="student">CLIENT</option>
+                <option value="faculty">USER</option>
+              </select>
               <button
                 style={{
                   padding: '10px',
@@ -275,7 +292,7 @@ const Login = () => {
     />
   ) : (
     <img
-      src={signupImage}
+      src={signup}
       alt="Signup Illustration"
       style={{ width: '100%', height: 'auto' }}
     />

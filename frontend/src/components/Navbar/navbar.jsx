@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/react.svg";
+import logo from "../../assets/react.svg"; // Adjust the path as necessary
 
 const Navbar = () => {
   const navigate = useNavigate();
