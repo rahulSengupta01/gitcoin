@@ -8,7 +8,7 @@ import TrendingGigs from "./TrendingGigs";
 import HowItWorks from "./HowItWorks";
 import Footer from "../Footer/Footer";
 
-// Image imports
+// Add image imports
 import img1 from "../../assets/53933.jpg";
 import img2 from "../../assets/50720.jpg";
 import img3 from "../../assets/52233.jpg";
@@ -23,7 +23,7 @@ const Landing = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000);
+    }, 3000); // change every 3 seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -46,44 +46,50 @@ const Landing = () => {
         </div>
 
         {/* Main Content Layout */}
-        <div className="main-content">
-          {/* Left Side - Features */}
-          <div className="features">
-            <div className="feature-item">
-              <h3>Decentralized & Transparent</h3>
-              <p>No hidden fees, no corporate control.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Instant & Secure Payments</h3>
-              <p>Crypto-based escrow ensures fair transactions.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Merit-Based System</h3>
-              <p>Skills & performance determine ranking, not platform bias.</p>
-            </div>
-            <div className="feature-item">
-              <h3>Global Access</h3>
-              <p>Work from anywhere, hire from anywhere.</p>
-            </div>
-          </div>
+<div className="main-content">
+  {/* Two Column Layout */}
+  <div className="content-wrapper">
+    
+    {/* Left: Features Section */}
+    <div className="features">
+      <div className="feature-item">
+        <h3>Decentralized & Transparent</h3>
+        <p>No hidden fees, no corporate control.</p>
+      </div>
+      <div className="feature-item">
+        <h3>Instant & Secure Payments</h3>
+        <p>Crypto-based escrow ensures fair transactions.</p>
+      </div>
+      <div className="feature-item">
+        <h3>Merit-Based System</h3>
+        <p>Skills & performance determine ranking, not platform bias.</p>
+      </div>
+      <div className="feature-item">
+        <h3>Global Access</h3>
+        <p>Work from anywhere, hire from anywhere.</p>
+      </div>
+    </div>
 
-          {/* Right Side - Image Slider */}
-          <div className="right-image-slider">
-            <img
-              src={images[currentIndex]}
-              alt={`Slide ${currentIndex + 1}`}
-              className="image-slider"
-            />
-          </div>
-        </div>
+    {/* Right: Image Slider Section */}
+    <div className="image-slider-container">
+      <img
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex + 1}`}
+        className="image-slider"
+      />
+    </div>
+
+  </div>
+</div>
+
       </div>
 
-      {/* Other Sections */}
+      {/* Additional Sections */}
       <DashboardSection />
       <TrendingGigs />
       <HowItWorks />
       <JoinWaitlistSection />
-      <Footer />
+      
     </>
   );
 };

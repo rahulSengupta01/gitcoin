@@ -1,7 +1,16 @@
 import React from "react";
-import "../../styles/DashboardSection.css"; // Import the CSS file
+import "../../styles/DashboardSection.css";
 import { FaUsers, FaBriefcase, FaDollarSign } from "react-icons/fa";
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 const DashboardSection = () => {
   const earningsData = [
@@ -40,8 +49,8 @@ const DashboardSection = () => {
         </div>
       </div>
 
-      {/* Charts & Insights */}
-      <div className="charts-section">
+      {/* Charts Section - Fixed Side by Side */}
+      <div className="charts-box-container">
         <div className="chart-box">
           <h3>Earnings Overview</h3>
           <ResponsiveContainer width="100%" height={200}>
@@ -49,7 +58,12 @@ const DashboardSection = () => {
               <XAxis dataKey="month" stroke="#888" />
               <YAxis />
               <Tooltip />
-              <Line type="monotone" dataKey="earnings" stroke="#4CAF50" strokeWidth={3} />
+              <Line
+                type="monotone"
+                dataKey="earnings"
+                stroke="#4CAF50"
+                strokeWidth={3}
+              />
             </LineChart>
           </ResponsiveContainer>
         </div>
