@@ -83,7 +83,7 @@ const Landing = () => {
       <TrendingGigs />
       <HowItWorks />
       <JoinWaitlistSection />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
