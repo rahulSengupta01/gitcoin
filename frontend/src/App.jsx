@@ -12,6 +12,9 @@ import MyProject from './components/Client/MyProject.jsx';
 import PostJob from './components/Client/PostJob.jsx';
 import MyJobs from './components/Client/MyJobs.jsx';
 import PostProject from './components/Client/PostProject.jsx';
+import About from './components/Navbar/About.jsx';
+import Explore from './components/Navbar/Explore.jsx';
+import Contact from './components/Navbar/Contact.jsx';
 
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
         <Route path="/my-jobs" element={<MyJobs />} />
         <Route path="/user-dashboard" element={<UserDashboard />} />
         <Route path="/post-project" element={<PostProject />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/contact" element={<Contact />} />
       
       </Routes>
       <Footer />

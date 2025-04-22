@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./CreateTask.css"; // Import the CSS file
+import "../../components/Homepage/CreateTask.css"; // Import the CSS file
 import Task from "../../assets/3856147.png"; // Import the image
 
 const CreateTask = () => {
@@ -91,6 +91,7 @@ const CreateTask = () => {
       <img src={Task} alt="Task Illustration" />
 
       </div>
+      
     </div>
     
   );

@@ -4,6 +4,7 @@ import { auth } from '../../firebaseConfig';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import loginImage from '../../assets/login.avif'; // Import your login image here
 import signup from '../../assets/signup.jpg'; // Import your signup image here
+import { useAuth } from '../../context/auth-context';//Import useAuth
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -13,6 +14,7 @@ const Login = () => {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const [signupSuccess, setSignupSuccess] = useState(false);
+  const { currentUser } = useAuth(); //Authenticated user
   const navigate = useNavigate();
 
   const toggleForm = () => {

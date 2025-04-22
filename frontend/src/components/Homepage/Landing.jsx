@@ -89,11 +89,7 @@ const Landing = () => {
       <TrendingGigs />
       <HowItWorks />
       <JoinWaitlistSection />
-<<<<<<< HEAD
       
-=======
-      {/* <Footer /> */}
->>>>>>> e455530867c72a644777577099438b70cebb41cd
     </>
   );
 };

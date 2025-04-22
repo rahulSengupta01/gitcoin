@@ -16,12 +16,12 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 10px 20px;
   background-color: #333;
   color: white;
   position: fixed;
   width: 100%;
-  top: 10;
+  top: 0;
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -33,14 +33,17 @@ body, html {
 }
 
 .logo {
-  height: 50px;
-  margin-right: 12px;
+  width: 50px;
+  height: auto;
+  margin-right: 5px;
+  margin-top: 10px;
 }
 
 .site-name {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   color: black;
+  letter-spacing: 1px;
 }
 
 /* Navbar Links */
