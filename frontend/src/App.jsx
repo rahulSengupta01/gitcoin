@@ -1,13 +1,13 @@
-import Navbar from './components//Navbar/navbar.jsx';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar/navbar.jsx';
 import Landing from './components/Homepage/Landing.jsx';
 import Login from './components/auth/Login';
-import { Routes, Route } from 'react-router-dom';
-import CreateTask from './components//Homepage/CreateTask';
-import FindWork from './components//Homepage/FindWork.jsx';
-import HireTalent from './components//Homepage/HireTalent.jsx';
-import Footer from './components//Footer/Footer.jsx';
-import ClientDashboard from "./components/Client/ClientDashboard.jsx";
-import UserDashboard from './components//User/UserDashboard.jsx';
+import CreateTask from './components/Homepage/CreateTask';
+import FindWork from './components/Homepage/FindWork.jsx';
+import HireTalent from './components/Homepage/HireTalent.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import ClientDashboard from './components/Client/ClientDashboard.jsx';
+import UserDashboard from './components/User/UserDashboard.jsx';
 import MyProject from './components/Client/MyProject.jsx';
 import PostJob from './components/Client/PostJob.jsx';
 import MyJobs from './components/Client/MyJobs.jsx';
@@ -16,11 +16,21 @@ import About from './components/Navbar/About.jsx';
 import Explore from './components/Navbar/Explore.jsx';
 import Contact from './components/Navbar/Contact.jsx';
 
-
 function App() {
+  const location = useLocation();
+
+  const showNavbarRoutes = [
+    '/', '/about', '/explore', '/contact', '/find-work', '/hire-talent', '/client-dashboard','/user-dashboard', '/my-project', '/post-job', '/my-jobs', '/post-project'
+  ];
+
+  // Define the routes where you want the footer to appear
+  const showFooterRoutes = ['/about', '/explore', '/contact', '/'];
+
+  const shouldShowFooter = showFooterRoutes.includes(location.pathname);
+  const shouldShowNavbar = showNavbarRoutes.includes(location.pathname);
   return (
     <>
-      <Navbar />
+      {shouldShowNavbar && <Navbar />}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
@@ -36,9 +46,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/contact" element={<Contact />} />
-      
+        
+
       </Routes>
-      <Footer />
+      {shouldShowFooter && <Footer />}
     </>
   );
 }
